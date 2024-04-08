@@ -1,23 +1,44 @@
-<?php require "components/heads.php" ?>
-<?php require "components/navbar.php" ?>
-
-<h1>Edit</h1>
+<?php require "views/components/heads.php" ?>
+<?php require "views/components/navbar.php" ?>
 
 
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Published</th>
-        <th>availale</th>
-    </tr>
-<?php foreach($books as $book) { ?>
-<tr>
-  <td> <?= $book["name"] ?> </td>
-  <td> <?= $book["author"] ?></td>
-  <td> <?= $book["published"] ?></td>
-  <td> <?= $book["available"] ?> </td>
-</tr>
-<?php } ?>
-</table>
-<?php require "components/footer.php" ?>
+<h1>Edit <?= htmlspecialchars($book["name"]) ?></h1>
+
+<form method="POST">
+    <input name="id" value=" <?= $book["id"] ?>" type="hidden" />
+    <label style="color: white;">Nosaukums:
+        <input name="name" value="<?= $_POST["name"] ?? $book["name"] ?>"/>
+        <?php if (isset($errors["name"])) { ?>
+            <p class="invalid-data"><?= $errors["name"] ?></p>
+            <?php } ?>
+    </label>
+
+    <br/>
+
+    <label style="color: white;">Published:
+        <input name="published" value="<?= $_POST["published"] ?? $book["published"] ?>"/>
+        <?php if (isset($errors["published"])) { ?>
+            <p class="invalid-data"><?= $errors["published"] ?></p>
+            <?php } ?>
+    </label>
+
+    <br/>
+
+    <label style="color: white;">Author:
+        <input name="author" value="<?= $_POST["author"] ?? $book["author"] ?>"/>
+        <?php if (isset($errors["author"])) { ?>
+            <p class="invalid-data"><?= $errors["author"] ?></p>
+            <?php } ?>
+    </label>
+
+    <br/>
+
+    <label style="color: white;">Available:
+        <input name="available" value="<?= $_POST["available"] ?? $book["available"] ?>"/>
+        <?php if (isset($errors["available"])) { ?>
+            <p class="invalid-data"><?= $errors["available"] ?></p>
+            <?php } ?>
+    </label>
+    
+    <button>Save</button>
+</form>

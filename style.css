@@ -21,10 +21,6 @@ h1 {
   color: #fcf6f5;
 }
 
-a {
-  color: #fcf6f5;
-}
-
 header {
   background-color: #3a025b;
 
@@ -74,21 +70,22 @@ button {
   background-color: #9147ff;
   color: white;
   padding: 0 20px;
+  transition: 0.5s;
 }
 
 button:hover {
   background-color: #772ce8;
   color: white;
-  transition: 0.5s;
 }
 
 a {
   text-decoration: none;
+  transition: 0.5s;
+  color: #fcf6f5;
 }
 
 a:hover {
   transform: scale(1.03);
-  color: gray;
 }
 
 .delete-tag {
@@ -103,11 +100,21 @@ a:hover {
   background-color: #9147ff;
   color: white;
   padding: 0 20px;
-  text-align: center;
+  padding-top: 5px;
+  transition: 0.5s;
 }
 
 .delete-tag:hover {
   background-color: #772ce8;
   color: white;
+}
+
+.show {
+  text-decoration: none;
   transition: 0.5s;
+  color: #9147ff;
+}
+
+.show:hover {
+  color: red;
 }
