@@ -3,17 +3,15 @@
 
 <h1>Register</h1>
 
-<form>
-    <label style="color: white;">Email:
-        <input name="user"/>
-    </label>
-    <br/>
+<form action="/register" method="POST">
     <label style="color: white;">Username:
         <input name="user"/>
     </label>
+
     <br/>
+    
     <label style="color: white;">Password:
-        <input name="pass"/>
+        <input name="password"/>
     </label>
     <button>Register</button>
 </form>

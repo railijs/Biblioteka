@@ -3,9 +3,9 @@
 
 <h1>Login</h1>
 
-<form>
+<form method="POST">
     <label style="color: white;">Username:
-        <input name="user"/>
+        <input class="auth" name="user"/>
     </label>
     <br/>
     <label style="color: white;">Password:
@@ -13,4 +13,5 @@
     </label>
     <button>Login</button>
 </form>
+
 <?php require "components/footer.php" ?>

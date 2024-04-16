@@ -16,7 +16,7 @@
     <br/>
 
     <label style="color: white;">Published:
-        <input name="published" value="<?= $_POST["published"] ?? $book["published"] ?>"/>
+        <input type="date" name="published" value="<?= $_POST["published"] ?? $book["published"] ?>"/>
         <?php if (isset($errors["published"])) { ?>
             <p class="invalid-data"><?= $errors["published"] ?></p>
             <?php } ?>

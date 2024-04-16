@@ -10,18 +10,13 @@ CREATE TABLE books (
   published DATE NOT NULL,
   available INT
 ); 
-
-
-CREATE TABLE users(
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  user_id INT NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES users(id),
-  book_id INT NOT NULL,
-  FOREIGN KEY (book_id) REFERENCES books(id),
-  borrowed_date DATE NOT NULL,
-  return_date DATE
-);
  
+ CREATE TABLE account(
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  books VARCHAR(255)
+)
 
 INSERT INTO books
   (name, author, published, available)

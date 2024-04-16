@@ -16,6 +16,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors["name"] = "Name cannot be empty or too long";
     }
 
+    if(!Validator::date($_POST["published"])) {
+        $errors["published"] = "date cannot be empty";
+    }
+
     if(!Validator::string($_POST["author"], min: 1, max: 255)) {
         $errors["author"] = "Author cannot be too long";
     }
@@ -28,10 +32,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     if(empty($errors)) {
     
         $query = "UPDATE books
-                  SET name = :name, author = :author, available = :available
+                  SET name = :name, published = :published, author = :author, available = :available
                   WHERE id = :id";
         $params = [
             ":name" => $_POST["name"],
+            ":published" => $_POST["published"],
             ":author" => $_POST["author"],
             ":available" => $_POST["available"],
             ":id" => $_POST["id"]
