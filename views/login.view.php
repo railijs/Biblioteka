@@ -5,11 +5,11 @@
 
 <form method="POST">
     <label style="color: white;">Username:
-        <input class="auth" name="user"/>
+        <input name="user"/>
     </label>
     <br/>
     <label style="color: white;">Password:
-        <input name="pass"/>
+        <input name="password"/>
     </label>
     <button>Login</button>
 </form>

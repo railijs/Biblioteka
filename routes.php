@@ -9,5 +9,6 @@ return [
     "/show" => "controllers/show.php",
     "/edit" => "controllers/edit.php",
     "/register" => "controllers/register.php",
-    "/login" => "controllers/login.php"
+    "/login" => "controllers/login.php",
+    "/logout" => "controllers/logout.php"
 ];

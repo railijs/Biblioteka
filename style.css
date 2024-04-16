@@ -50,13 +50,13 @@ form {
 table,
 th,
 td {
-  border: 3px solid white;
   border-collapse: collapse;
   color: white;
   text-align: center;
   align-items: center;
   color: black;
   font-weight: 700;
+  border: 3px solid black;
 }
 
 button {
@@ -80,7 +80,6 @@ button:hover {
 }
 
 a {
-  text-decoration: none;
   transition: 0.5s;
   color: #fcf6f5;
 }
@@ -111,7 +110,6 @@ a:hover {
 }
 
 .show {
-  text-decoration: none;
   transition: 0.5s;
   color: #9147ff;
 }

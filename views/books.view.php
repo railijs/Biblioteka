@@ -3,7 +3,9 @@
 
 <h1>Books</h1>
 
-
+<?php if($_SESSION["user"] == true ) { ?>
+<p>Welcome, <?= $_SESSION["username"] ?>!</p>
+<?php } ?>
 <div class="books">
   <h1 style="color: black;">Available Books</h1>
 <table>

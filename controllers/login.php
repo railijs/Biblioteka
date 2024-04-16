@@ -15,7 +15,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = $db -> execute($query, $params) -> fetch();
         if($result) {
             $_SESSION["user"] = true;
-            $_SESSION["user"] = $_POST["user"];
+            $_SESSION["username"] = $_POST["user"];
             header("Location: /books");
 
         } else {
