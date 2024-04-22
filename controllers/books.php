@@ -1,4 +1,6 @@
 <?php
+auth();
+
 require "Database.php";
 $config = require ("config.php");
 $query = "SELECT * FROM books";

@@ -1,4 +1,6 @@
 <?php
+auth();
+
 
 $_SESSION["user"] = false;
 session_destroy();

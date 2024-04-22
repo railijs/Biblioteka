@@ -1,4 +1,6 @@
 <?php
+auth();
+
 require "Validator.php";
 require "Database.php";
 
