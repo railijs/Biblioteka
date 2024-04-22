@@ -1,5 +1,5 @@
 body {
-  background-color: #1a0129;
+  background-color: lightskyblue;
 
   display: flex;
   justify-content: center;
@@ -22,7 +22,7 @@ h1 {
 }
 
 header {
-  background-color: #3a025b;
+  background-color: black;
 
   height: 30px;
   width: 100vw;
@@ -68,25 +68,24 @@ button {
   border-radius: 4px;
   font-size: 13px;
   height: 25px;
-  background-color: #9147ff;
+  background-color: #00aff0;
   color: white;
   padding: 0 20px;
   transition: 0.5s;
 }
 
 button:hover {
-  background-color: #772ce8;
+  background-color: #006e96;
   color: white;
 }
 
-a {
+/* a {
   transition: 0.5s;
-  color: #fcf6f5;
 }
 
 a:hover {
   transform: scale(1.03);
-}
+} */
 
 .delete-tag {
   display: inline-block;
@@ -111,7 +110,7 @@ a:hover {
 
 .show {
   transition: 0.5s;
-  color: #9147ff;
+  color: #00aff0;
 }
 
 .show:hover {
@@ -151,6 +150,56 @@ input:focus {
   color: red;
 }
 
-label {
-  color: white;
+.login {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 50px;
+  color: black;
+}
+
+.register {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 50px;
+  color: black;
+}
+
+.nav {
+  color: #00aff0;
+  transition: 0.5;
+}
+
+.nav:hover {
+  transform: scale(1.03);
+}
+
+.edit {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 50px;
+  color: black;
+}
+
+.create {
+  background-color: whitesmoke;
+  border-radius: 20px;
+  padding: 50px;
+  color: black;
+}
+
+.title {
+  display: flex;
+  align-content: center;
+}
+
+.word1 {
+  color: #27272b;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 75px;
+}
+
+.word2 {
+  color: #00aff0;
+  font-family: Brush Script MT, Brush Script Std, cursive;
+  font-size: 75px;
 }

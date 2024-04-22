@@ -3,7 +3,7 @@
 
 <h1>Login</h1>
 
-<form method="POST">
+<form class="login" method="POST">
     <label>Username: 
         <input name="user" type="text"/>
         <?php if (isset($errors["user"])) { ?>
@@ -20,6 +20,6 @@
     <br/>
     <button>Login</button>
     <br/>
-    <a href="/register">Create Account</a>
+    <a class="nav" href="/register">Create Account</a>
 </form>
 <?php require "components/footer.php" ?>

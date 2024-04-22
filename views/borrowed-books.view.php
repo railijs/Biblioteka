@@ -6,6 +6,7 @@
 <h1 style="color: black;">Your Borrowed Books</h1>
 <table>
     <tr>
+    
         <th>Title</th>
         <th>Author</th>
         <th>Published</th>

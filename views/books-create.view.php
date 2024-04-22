@@ -4,20 +4,20 @@
 
 <h1>Izveido Gramatu</h1>
 
-<form method="POST">
-    <label style="color: white;">Title:
+<form class="create" method="POST">
+    <label>Title:
         <input name="name"/>
     </label>
     <br/>
-    <label style="color: white;">Author:
+    <label>Author:
         <input name="author"/>
     </label>
     <br/>
-    <label style="color: white;">Published:
+    <label>Published:
         <input type="date" name="published"/>
     </label>
     <br/>
-    <label style="color: white;">Available:
+    <label>Available:
         <input name="available"/>
     </label>
     <button>Save</button>

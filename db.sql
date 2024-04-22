@@ -24,7 +24,6 @@ VALUES
   ("Matisa piedzivojumi", "Railijs Didzis Grieznis", '2024-03-20', 1);
 
   CREATE TABLE borrow_books (
-    CREATE TABLE borrow_books (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     book_id INT NOT NULL,
     FOREIGN KEY (book_id) REFERENCES books(id),
@@ -34,5 +33,4 @@ VALUES
     author VARCHAR(255) NOT NULL,
     published DATE NOT NULL,
     available INT NOT NULL
-);
 );

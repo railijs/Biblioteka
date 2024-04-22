@@ -35,10 +35,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     if(empty($errors)) {
-        $query = "INSERT INTO account (user, password) VALUES (:user, :password)";
+        $query = "INSERT INTO account (user, password, admin) VALUES (:user, :password, :admin)";
         $params = [
         ":user" => $_POST["user"],
-        ":password" => password_hash($_POST["password"], PASSWORD_BCRYPT)
+        ":password" => password_hash($_POST["password"],  PASSWORD_BCRYPT)
         ];
         $db->execute($query, $params);
         header("Location: /login");

@@ -4,9 +4,9 @@
 
 <h1>Edit <?= htmlspecialchars($book["name"]) ?></h1>
 
-<form method="POST">
+<form class="edit" method="POST">
     <input name="id" value=" <?= $book["id"] ?>" type="hidden" />
-    <label style="color: white;">Nosaukums:
+    <label>Nosaukums:
         <input name="name" value="<?= $_POST["name"] ?? $book["name"] ?>"/>
         <?php if (isset($errors["name"])) { ?>
             <p class="invalid-data"><?= $errors["name"] ?></p>
@@ -15,7 +15,7 @@
 
     <br/>
 
-    <label style="color: white;">Published:
+    <label>Published:
         <input type="date" name="published" value="<?= $_POST["published"] ?? $book["published"] ?>"/>
         <?php if (isset($errors["published"])) { ?>
             <p class="invalid-data"><?= $errors["published"] ?></p>
@@ -24,7 +24,7 @@
 
     <br/>
 
-    <label style="color: white;">Author:
+    <label>Author:
         <input name="author" value="<?= $_POST["author"] ?? $book["author"] ?>"/>
         <?php if (isset($errors["author"])) { ?>
             <p class="invalid-data"><?= $errors["author"] ?></p>
@@ -33,7 +33,7 @@
 
     <br/>
 
-    <label style="color: white;">Available:
+    <label>Available:
         <input name="available" value="<?= $_POST["available"] ?? $book["available"] ?>"/>
         <?php if (isset($errors["available"])) { ?>
             <p class="invalid-data"><?= $errors["available"] ?></p>
