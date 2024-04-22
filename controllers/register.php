@@ -1,30 +1,52 @@
 <?php
+
+require "Validator.php";
 require "Database.php";
 $config = require ("config.php");
-$db = new Database($config);
 
 $query = "SELECT * FROM account";
 $params = [];
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(isset($_POST["user"]) && isset($_POST["password"])) {
-        $query = "INSERT INTO account (user, password)
-                  VALUES (:user, :password);";
+    $db = new Database($config);
+    $errors = [];
 
+    if(!Validator::string($_POST["user"], min: 5)) {
+        $errors["user"] = "Username jabut 5 rakstzimem garam";
+    }
+
+    if(!Validator::string($_POST["password"], min: 5)) {
+        $errors["password"] = "Parolei jabut 5 rakstzimem garai";
+    }
+
+
+    $query = "SELECT * FROM account WHERE user = :user";
+    $params = [
+        ":user" => $_POST["user"]
+    ];
+
+    $result = $db->execute($query, $params)
+                 ->fetch();
+
+    if($result) {
+        $errors["user"] = "user pastav";
+    }
+
+    if(empty($errors)) {
+        $query = "INSERT INTO account (user, password) VALUES (:user, :password)";
         $params = [
-            ":user" => $_POST["user"], 
-            ":password" => $_POST["password"]
+        ":user" => $_POST["user"],
+        ":password" => password_hash($_POST["password"], PASSWORD_BCRYPT)
         ];
-
-        $db -> execute($query, $params);
-        
+        $db->execute($query, $params);
         header("Location: /login");
-        die();
-    } else {
-        // Handle the case where the form data is not as expected
-        echo "User or password not set in the request";
+                die();
+
     }
 }
+
+
+
 
 $title = "Register";
 require "views/register.view.php";

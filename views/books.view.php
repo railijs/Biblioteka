@@ -3,9 +3,7 @@
 
 <h1>Books</h1>
 
-<?php if($_SESSION["user"] == true ) { ?>
-<p>Welcome, <?= $_SESSION["username"] ?>!</p>
-<?php } ?>
+<h1 class="email">Welcome, <?= isset($_SESSION["username"]) ? $_SESSION["username"] : "guest"; ?></h1>
 <div class="books">
   <h1 style="color: black;">Available Books</h1>
 <table>
@@ -27,13 +25,16 @@
   <form class="delete-form" method="POST" action="/delete"><button class="delete-button" name="id" value="<?= $book["id"] ?>" >Delete</button></form>    </form>
 </td>
 <td>
-  <form class="delete-form" action="/edit"><button class="delete-button" name="id" value="<?= $book["id"] ?>" >edit</button></form>    </form>
-  </td>
+  <form class="delete-form" action="/edit"><button class="delete-button" name="id" value="<?= $book["id"] ?>" >Edit</button></form>    </form>
+</td>
+<td>
+  <form class="delete-form" method="POST" action="/borrow-books"><button class="delete-button" name="id" value="<?= $book["id"] ?>" >Borrow</button></form>    </form>
+</td>
 
 </tr>
 <?php } ?>
 </table>
-</div>
+<div/>
 
 
 <?php require "components/footer.php" ?>

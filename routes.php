@@ -10,5 +10,8 @@ return [
     "/edit" => "controllers/edit.php",
     "/register" => "controllers/register.php",
     "/login" => "controllers/login.php",
-    "/logout" => "controllers/logout.php"
+    "/logout" => "controllers/logout.php",
+    "/borrow-books" => "controllers/borrow-books.php",
+    "/borrowed-books" => "controllers/borrowed-books.php",
+    "/return" => "controllers/return.php"
 ];

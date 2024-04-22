@@ -1,17 +1,25 @@
 <?php require "components/heads.php" ?>
-<?php require "components/navbar.php" ?>
+
 
 <h1>Login</h1>
 
 <form method="POST">
-    <label style="color: white;">Username:
-        <input name="user"/>
+    <label>Username: 
+        <input name="user" type="text"/>
+        <?php if (isset($errors["user"])) { ?>
+            <p class="invalid-data"><?= $errors["user"] ?></p>
+            <?php } ?>
     </label>
     <br/>
-    <label style="color: white;">Password:
-        <input name="password"/>
+    <label>Password: 
+        <input name="password" type="password"/>  
+        <?php if (isset($errors["password"])) { ?>
+            <p class="invalid-data"><?= $errors["password"] ?></p>
+            <?php } ?>
     </label>
+    <br/>
     <button>Login</button>
+    <br/>
+    <a href="/register">Create Account</a>
 </form>
-
 <?php require "components/footer.php" ?>

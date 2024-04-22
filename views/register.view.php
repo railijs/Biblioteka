@@ -1,19 +1,26 @@
 <?php require "components/heads.php" ?>
-<?php require "components/navbar.php" ?>
+
 
 <h1>Register</h1>
 
-<form action="/register" method="POST">
-    <label style="color: white;">Username:
-        <input name="user"/>
+<form method="POST">
+    <label>Username: 
+        <input name="user" type="text"/> 
+        <?php if (isset($errors["user"])) { ?>
+            <p class="invalid-data"><?= $errors["user"] ?></p>
+            <?php } ?>
     </label>
-
     <br/>
-    
-    <label style="color: white;">Password:
-        <input name="password"/>
+    <label>Password: 
+        <input name="password" type="password"/> 
+        <?php if (isset($errors["password"])) { ?>
+            <p class="invalid-data"><?= $errors["password"] ?></p>
+            <?php } ?>
     </label>
+    <br/>
     <button>Register</button>
+    <br/>
+    <a href="/login">Log In</a>
 </form>
 
 <?php require "components/footer.php" ?>
