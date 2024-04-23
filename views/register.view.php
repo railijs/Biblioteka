@@ -20,7 +20,7 @@
     <br/>
     <button>Register</button>
     <br/>
-    <a class="nav" href="/login">Log In</a>
+    <a class="nav" href="/">Log In</a>
 </form>
 
 <?php require "components/footer.php" ?>

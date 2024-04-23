@@ -41,6 +41,7 @@ nav {
   width: 100%;
   justify-content: space-between;
   margin: 15px;
+  box-shadow: #27272b;
 }
 
 form {
@@ -79,13 +80,13 @@ button:hover {
   color: white;
 }
 
-/* a {
+a {
   transition: 0.5s;
 }
 
 a:hover {
   transform: scale(1.03);
-} */
+}
 
 .delete-tag {
   display: inline-block;
@@ -203,3 +204,15 @@ input:focus {
   font-family: Brush Script MT, Brush Script Std, cursive;
   font-size: 75px;
 }
+
+/* .email {
+  font-size: clamp(1vw, 1rem, 2vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  position: fixed;
+
+  color: whitesmoke;
+  font-weight: 500;
+} */

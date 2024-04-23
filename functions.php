@@ -9,7 +9,7 @@ die();
 
 function auth() {
     if (!isset($_SESSION["user"])) {
-        header("Location: /login");
+        header("Location: /books");
         die();
     }
 }
@@ -20,4 +20,11 @@ function guest() {
         die();
     }
 
+}
+
+function admin(){
+if($_SESSION['admin'] == 1) {
+    header("Location: /books");
+    die();
+   }
 }

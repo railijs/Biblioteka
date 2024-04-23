@@ -1,11 +1,13 @@
 <?php require "components/heads.php" ?>
 <?php require "components/navbar.php" ?>
 
+<h1 class="email">Welcome, <?= isset($_SESSION["username"]) ? $_SESSION["username"] : "guest"; ?>!</h1>
+
+
 <div class="title">
     <h1 class="word1">Only</h1> <h1 class="word2">Books</h1>
 </div>
 
-<h1 class="email">Welcome, <?= isset($_SESSION["username"]) ? $_SESSION["username"] : "guest"; ?></h1>
 <div class="books">
   <h1 style="color: black;">Available Books</h1>
 <table>
